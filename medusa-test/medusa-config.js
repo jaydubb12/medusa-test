@@ -67,6 +67,12 @@ const modules = {
       redisUrl: REDIS_URL
     }
   },*/
+  inventoryService: {
+    resolve: "@medusajs/inventory",
+  },
+  stockLocationService: {
+    resolve: "@medusajs/stock-location",
+  },
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
@@ -85,4 +91,8 @@ module.exports = {
   projectConfig,
   plugins,
   modules,
+  featureFlags: {
+    product_categories: true,
+    sales_channels: true
+  }
 };
