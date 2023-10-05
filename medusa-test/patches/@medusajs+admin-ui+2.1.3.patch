@@ -1,0 +1,43 @@
+diff --git a/node_modules/@medusajs/admin-ui/ui/src/pages/a.tsx b/node_modules/@medusajs/admin-ui/ui/src/pages/a.tsx
+index acab612..e3656a5 100644
+--- a/node_modules/@medusajs/admin-ui/ui/src/pages/a.tsx
++++ b/node_modules/@medusajs/admin-ui/ui/src/pages/a.tsx
+@@ -10,7 +10,7 @@ import Layout from "../components/templates/layout"
+ import Collections from "../domain/collections"
+ import Customers from "../domain/customers"
+ import Discounts from "../domain/discounts"
+-import GiftCards from "../domain/gift-cards"
++//import GiftCards from "../domain/gift-cards"
+ import Inventory from "../domain/inventory"
+ import Oauth from "../domain/oauth"
+ import Orders from "../domain/orders"
+@@ -50,7 +50,6 @@ const DashboardRoutes = () => {
+           <Route path="products/*" element={<ProductsRoute />} />
+           <Route path="product-categories/*" element={<ProductCategories />} />
+           <Route path="collections/*" element={<Collections />} />
+-          <Route path="gift-cards/*" element={<GiftCards />} />
+           <Route path="orders/*" element={<Orders />} />
+           <Route path="draft-orders/*" element={<DraftOrders />} />
+           <Route path="discounts/*" element={<Discounts />} />
+diff --git a/node_modules/@medusajs/admin-ui/ui/src/services/api.js b/node_modules/@medusajs/admin-ui/ui/src/services/api.js
+index faa6dfb..9968ff3 100644
+--- a/node_modules/@medusajs/admin-ui/ui/src/services/api.js
++++ b/node_modules/@medusajs/admin-ui/ui/src/services/api.js
+@@ -158,7 +158,7 @@ export default {
+     },
+   },
+ 
+-  giftCards: {
++ /* giftCards: {
+     create(giftCard) {
+       const path = `/admin/gift-cards`
+       return medusaRequest("POST", path, giftCard)
+@@ -186,7 +186,7 @@ export default {
+       const path = `/admin/gift-cards/${giftCardId}`
+       return medusaRequest("DELETE", path)
+     },
+-  },
++  }, */
+ 
+   variants: {
+     list(search = {}) {
